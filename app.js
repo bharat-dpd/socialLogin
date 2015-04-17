@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
-app.use(session({ secret: config.sessions.sessionsKey}));
+app.use(session({ secret: config.sessions.sessionKey}));
 app.use('/', routes);
 app.use('/users', users);
 
